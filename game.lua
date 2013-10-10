@@ -9,6 +9,12 @@ function game:enter()
     height              = love.graphics.getHeight();
 end
 
+function game:keyreleased(key, code)
+    if key == 'escape' then
+        love.event.push("quit")
+    end
+end
+
 function game:update(dt)
 	time = time + dt;
 	if time > deltaUpdate then
