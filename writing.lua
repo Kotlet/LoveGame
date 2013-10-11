@@ -1,14 +1,20 @@
 Writing = {
-	text 	= "kupa!";
 	pos_x	= 0;
 	pos_y	= 0;
 }
 
-function Writing:new (o)
-  o = o or {}
-  setmetatable(o, self)
-  self.__index = self
-  return o
+Writing.__index = Writing;
+
+setmetatable(Writing, {
+  __call = function (cls, ...)
+    return cls.new(...)
+  end,
+});
+
+function Writing.new(initText)
+  local self = setmetatable({}, Writing);
+  self.text = initText or "HELLO!";
+  return self
 end
 
 function Writing:update (width, height, exclamations)
