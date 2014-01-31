@@ -1,0 +1,191 @@
+<NotepadPlus>
+    <Project name="LoveGame">
+        <Folder name="AdvTiledLoader">
+            <Folder name="external">
+                <File name="AdvTiledLoader\external\crc32lua.lua" />
+                <File name="AdvTiledLoader\external\deflatelua.lua" />
+                <File name="AdvTiledLoader\external\gunziplua.lua" />
+                <File name="AdvTiledLoader\external\numberlua.lua" />
+                <File name="AdvTiledLoader\external\optparse.lua" />
+                <File name="AdvTiledLoader\external\xml.lua" />
+            </Folder>
+            <File name="AdvTiledLoader\Base64.lua" />
+            <File name="AdvTiledLoader\Grid.lua" />
+            <File name="AdvTiledLoader\init.lua" />
+            <File name="AdvTiledLoader\Loader.lua" />
+            <File name="AdvTiledLoader\Map.lua" />
+            <File name="AdvTiledLoader\Object.lua" />
+            <File name="AdvTiledLoader\ObjectLayer.lua" />
+            <File name="AdvTiledLoader\README.md" />
+            <File name="AdvTiledLoader\Tile.lua" />
+            <File name="AdvTiledLoader\TileLayer.lua" />
+            <File name="AdvTiledLoader\TileSet.lua" />
+            <File name="AdvTiledLoader\VERSION.txt" />
+        </Folder>
+        <Folder name="engineoflove">
+            <Folder name="fonts">
+                <File name="engineoflove\fonts\courier_new_12.png" />
+                <File name="engineoflove\fonts\freesans_26.png" />
+            </Folder>
+            <Folder name="inc">
+                <File name="engineoflove\inc\audio.lua" />
+                <File name="engineoflove\inc\callbacks.lua" />
+                <File name="engineoflove\inc\const.lua" />
+                <File name="engineoflove\inc\debug.lua" />
+                <File name="engineoflove\inc\main.lua" />
+                <File name="engineoflove\inc\misc.lua" />
+                <File name="engineoflove\inc\osd.lua" />
+                <File name="engineoflove\inc\prefs.lua" />
+                <File name="engineoflove\inc\screen.lua" />
+            </Folder>
+            <File name="engineoflove\init.lua" />
+            <File name="engineoflove\keys.lua" />
+            <File name="engineoflove\prefs.lua" />
+            <File name="engineoflove\README.md" />
+        </Folder>
+        <Folder name="graphics">
+            <File name="graphics\cursor.pdn" />
+            <File name="graphics\cursor.png" />
+            <File name="graphics\terrain.pdn" />
+        </Folder>
+        <Folder name="hump">
+            <File name="hump\BaseState.lua" />
+            <File name="hump\gamestate.lua" />
+            <File name="hump\timer.lua" />
+        </Folder>
+        <Folder name="loveframes">
+            <Folder name="loveframes">
+                <Folder name="libraries">
+                    <File name="loveframes\loveframes\libraries\debug.lua" />
+                    <File name="loveframes\loveframes\libraries\skins.lua" />
+                    <File name="loveframes\loveframes\libraries\templates.lua" />
+                    <File name="loveframes\loveframes\libraries\util.lua" />
+                </Folder>
+                <Folder name="objects">
+                    <Folder name="internal">
+                        <Folder name="columnlist">
+                            <File name="loveframes\loveframes\objects\internal\columnlist\columnlistarea.lua" />
+                            <File name="loveframes\loveframes\objects\internal\columnlist\columnlistheader.lua" />
+                            <File name="loveframes\loveframes\objects\internal\columnlist\columnlistrow.lua" />
+                        </Folder>
+                        <Folder name="multichoice">
+                            <File name="loveframes\loveframes\objects\internal\multichoice\multichoicelist.lua" />
+                            <File name="loveframes\loveframes\objects\internal\multichoice\multichoicerow.lua" />
+                        </Folder>
+                        <Folder name="scrollable">
+                            <File name="loveframes\loveframes\objects\internal\scrollable\scrollarea.lua" />
+                            <File name="loveframes\loveframes\objects\internal\scrollable\scrollbar.lua" />
+                            <File name="loveframes\loveframes\objects\internal\scrollable\scrollbody.lua" />
+                            <File name="loveframes\loveframes\objects\internal\scrollable\scrollbutton.lua" />
+                        </Folder>
+                        <File name="loveframes\loveframes\objects\internal\closebutton.lua" />
+                        <File name="loveframes\loveframes\objects\internal\linenumberspanel.lua" />
+                        <File name="loveframes\loveframes\objects\internal\menuoption.lua" />
+                        <File name="loveframes\loveframes\objects\internal\modalbackground.lua" />
+                        <File name="loveframes\loveframes\objects\internal\sliderbutton.lua" />
+                        <File name="loveframes\loveframes\objects\internal\tabbutton.lua" />
+                        <File name="loveframes\loveframes\objects\internal\tooltip.lua" />
+                    </Folder>
+                    <File name="loveframes\loveframes\objects\base.lua" />
+                    <File name="loveframes\loveframes\objects\button.lua" />
+                    <File name="loveframes\loveframes\objects\checkbox.lua" />
+                    <File name="loveframes\loveframes\objects\collapsiblecategory.lua" />
+                    <File name="loveframes\loveframes\objects\columnlist.lua" />
+                    <File name="loveframes\loveframes\objects\form.lua" />
+                    <File name="loveframes\loveframes\objects\frame.lua" />
+                    <File name="loveframes\loveframes\objects\grid.lua" />
+                    <File name="loveframes\loveframes\objects\image.lua" />
+                    <File name="loveframes\loveframes\objects\imagebutton.lua" />
+                    <File name="loveframes\loveframes\objects\list.lua" />
+                    <File name="loveframes\loveframes\objects\menu.lua" />
+                    <File name="loveframes\loveframes\objects\multichoice.lua" />
+                    <File name="loveframes\loveframes\objects\numberbox.lua" />
+                    <File name="loveframes\loveframes\objects\panel.lua" />
+                    <File name="loveframes\loveframes\objects\progressbar.lua" />
+                    <File name="loveframes\loveframes\objects\slider.lua" />
+                    <File name="loveframes\loveframes\objects\tabs.lua" />
+                    <File name="loveframes\loveframes\objects\text.lua" />
+                    <File name="loveframes\loveframes\objects\textinput.lua" />
+                </Folder>
+                <Folder name="skins">
+                    <Folder name="Blue">
+                        <Folder name="images">
+                            <Folder name="gradients">
+                                <File name="loveframes\loveframes\skins\Blue\images\gradients\button-down.png" />
+                                <File name="loveframes\loveframes\skins\Blue\images\gradients\button-hover.png" />
+                                <File name="loveframes\loveframes\skins\Blue\images\gradients\button-nohover.png" />
+                                <File name="loveframes\loveframes\skins\Blue\images\gradients\button-unclickable.png" />
+                                <File name="loveframes\loveframes\skins\Blue\images\gradients\frame-body.png" />
+                                <File name="loveframes\loveframes\skins\Blue\images\gradients\frame-topbar.png" />
+                                <File name="loveframes\loveframes\skins\Blue\images\gradients\progressbar.png" />
+                            </Folder>
+                            <File name="loveframes\loveframes\skins\Blue\images\arrow-down.png" />
+                            <File name="loveframes\loveframes\skins\Blue\images\arrow-left.png" />
+                            <File name="loveframes\loveframes\skins\Blue\images\arrow-right.png" />
+                            <File name="loveframes\loveframes\skins\Blue\images\arrow-up.png" />
+                            <File name="loveframes\loveframes\skins\Blue\images\close.png" />
+                            <File name="loveframes\loveframes\skins\Blue\images\collapse.png" />
+                            <File name="loveframes\loveframes\skins\Blue\images\expand.png" />
+                            <File name="loveframes\loveframes\skins\Blue\images\multichoice-arrow.png" />
+                        </Folder>
+                        <File name="loveframes\loveframes\skins\Blue\skin.lua" />
+                    </Folder>
+                    <Folder name="Orange">
+                        <Folder name="images">
+                            <Folder name="gradients">
+                                <File name="loveframes\loveframes\skins\Orange\images\gradients\button-down.png" />
+                                <File name="loveframes\loveframes\skins\Orange\images\gradients\button-hover.png" />
+                                <File name="loveframes\loveframes\skins\Orange\images\gradients\button-nohover.png" />
+                                <File name="loveframes\loveframes\skins\Orange\images\gradients\button-unclickable.png" />
+                                <File name="loveframes\loveframes\skins\Orange\images\gradients\frame-body.png" />
+                                <File name="loveframes\loveframes\skins\Orange\images\gradients\frame-topbar.png" />
+                                <File name="loveframes\loveframes\skins\Orange\images\gradients\progressbar.png" />
+                            </Folder>
+                            <File name="loveframes\loveframes\skins\Orange\images\arrow-down.png" />
+                            <File name="loveframes\loveframes\skins\Orange\images\arrow-left.png" />
+                            <File name="loveframes\loveframes\skins\Orange\images\arrow-right.png" />
+                            <File name="loveframes\loveframes\skins\Orange\images\arrow-up.png" />
+                            <File name="loveframes\loveframes\skins\Orange\images\close.png" />
+                            <File name="loveframes\loveframes\skins\Orange\images\collapse.png" />
+                            <File name="loveframes\loveframes\skins\Orange\images\expand.png" />
+                            <File name="loveframes\loveframes\skins\Orange\images\multichoice-arrow.png" />
+                        </Folder>
+                        <File name="loveframes\loveframes\skins\Orange\skin.lua" />
+                    </Folder>
+                </Folder>
+                <Folder name="templates">
+                    <File name="loveframes\loveframes\templates\base.lua" />
+                </Folder>
+                <Folder name="third-party">
+                    <File name="loveframes\loveframes\third-party\middleclass.lua" />
+                </Folder>
+                <File name="loveframes\loveframes\changelog.txt" />
+                <File name="loveframes\loveframes\init.lua" />
+                <File name="loveframes\loveframes\license.txt" />
+                <File name="loveframes\loveframes\readme.md" />
+            </Folder>
+            <Folder name="third-party">
+                <File name="loveframes\third-party\tween.lua" />
+            </Folder>
+            <File name="loveframes\demo.lua" />
+        </Folder>
+        <Folder name="maps">
+            <File name="maps\small_island.tmx" />
+            <File name="maps\terrain.png" />
+        </Folder>
+        <File name=".gitignore" />
+        <File name="conf.lua" />
+        <File name="game.cfg" />
+        <File name="gameSetup.lua" />
+        <File name="GameWorld.lua" />
+        <File name="keys.cfg" />
+        <File name="main.lua" />
+        <File name="mapScreen.lua" />
+        <File name="menu.lua" />
+        <File name="project.prj" />
+        <File name="TLfres.lua" />
+        <File name="MainMenuController.lua" />
+        <File name="res.lua" />
+        <File name="MapController.lua" />
+    </Project>
+</NotepadPlus>
