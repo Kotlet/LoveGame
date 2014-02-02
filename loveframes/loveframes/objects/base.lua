@@ -691,8 +691,8 @@ end
 --]]---------------------------------------------------------
 function newobject:InClickBounds()
 	local x, y = love.mouse.getPosition()
-	local widthFactor = gw / sw;
-	local heightFactor = gh / sh;
+	local widthFactor = GameSetup.actual_w / GameSetup.screen_w;
+	local heightFactor = GameSetup.actual_h / GameSetup.screen_h;
 	x = x*widthFactor;
 	y = y*heightFactor;
 	local bounds = self.clickbounds
@@ -737,8 +737,8 @@ function newobject:CheckHover()
 	local width = self.width
 	local height = self.height
 	local mx, my = love.mouse.getPosition()
-	local widthFactor = gw / sw;
-	local heightFactor = gh / sh;
+	local widthFactor = GameSetup.actual_w / GameSetup.screen_w;
+	local heightFactor = GameSetup.actual_h / GameSetup.screen_h;
 	mx = mx*widthFactor;
 	my = my*heightFactor;
 	local selfcol = loveframes.util.BoundingBox(mx, x, my, y, 1, width, 1, height)

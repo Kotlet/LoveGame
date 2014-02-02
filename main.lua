@@ -1,37 +1,17 @@
--- Gamestate = require "hump.gamestate"
--- require "gameSetup"
 
+-- GAME SETUP
+------------------------------------------------------------------------------
+require "GameSetup"
 
-
---require "menu"
---require "mapScreen"
-
---THIS SHOULD BE IN GAME SETUP ACTUALLY
-res   = require 'res'
-
-gw,gh = 320,240
-sw,sh = love.graphics.getWidth(),love.graphics.getHeight()
---sw,sh = 1920,1080
-mode  = 'fit'
-res.set(mode,gw,gh,sw,sh)
-font  = love.graphics.newFont(16)
-love.graphics.setFont(font)
-love.graphics.setDefaultFilter( "nearest", "nearest", 0 )
-
-tween = require("loveframes.third-party.tween")
-require("loveframes.loveframes")
-
-require 'MainMenuController'
-
-currentState = MainMenuController
-newState = MainMenuController
-
-love.mouse.setVisible(false);
-mouseCursorImage = love.graphics.newImage("graphics/cursor.png");
+--SOME CUSTOM FUNCTIONS
+------------------------------------------------------------------------------
 
 function setState(state)
 	newState = state;
 end
+
+--LOVE CORE FUNCTIONS
+------------------------------------------------------------------------------
 
 function love.load()
     --Gamestate.registerEvents()
@@ -40,61 +20,58 @@ end
 
 function love.update(dt)
 	if currentState ~= newState then
-		currentState:leave();
+		if currentState ~= nil then
+			currentState:leave();
+		end
 		currentState = newState;
 		loveframes.SetState(currentState.framesState);
 		currentState:enter();
 	end
 	currentState:update(dt);
 	loveframes.update(dt);
-end
-
-function drawWhole()
-	currentState.draw();
-	loveframes.draw();
-	local widthFactor = gw / sw;
-	local heightFactor = gh / sh;
-	local x, y = love.mouse.getPosition();
-	local x = x * widthFactor;
-	local y = y * heightFactor;
-	love.graphics.draw(mouseCursorImage,x,y);
-	--mouseCursorImage
+	tween.update(dt);
 end
 
 function love.draw()
-	res.render(drawWhole);
-	--loveframes.draw();
+	GameSetup:drawpre();
+	currentState:draw();
+	loveframes.draw();
+	local widthFactor = GameSetup.actual_w / GameSetup.screen_w;
+	local heightFactor = GameSetup.actual_h / GameSetup.screen_h;
+	local x, y = love.mouse.getPosition();
+	local x = x * widthFactor;
+	local y = y * heightFactor;
+	x = math.floor(x);
+	y = math.floor(y);
+	love.graphics.draw(mouseCursorImage,x,y);
+	GameSetup:drawpost();
 end
 
-function love.load()
-    --Gamestate.registerEvents()
-	--Gamestate.switch(menu)
-end
-
+--[[
 function love.mousemoved(x, y, button)
 	-- translate mouse!
 	widthFactor = gw / sw;
 	heightFactor = gh / sh;
 	newX = x*widthFactor;
 	newY = y*heightFactor;
-	print(newX)
-	print(newY)
     loveframes.mousemoved(x*widthFactor, y*heightFactor, button)
 end
+]]--
 
 function love.mousepressed(x, y, button)
-	-- translate mouse!
-	widthFactor = gw / sw;
-	heightFactor = gh / sh;
-	newX = x*widthFactor;
-	newY = y*heightFactor;
-	print(newX)
-	print(newY)
-    loveframes.mousepressed(x*widthFactor, y*heightFactor, button)
+	local widthFactor = GameSetup.actual_w / GameSetup.screen_w;
+	local heightFactor = GameSetup.actual_h / GameSetup.screen_h;
+	local newX = x*widthFactor;
+	local newY = y*heightFactor;
+    loveframes.mousepressed(newX, newY, button)
 end
  
 function love.mousereleased(x, y, button)
-    loveframes.mousereleased(x*widthFactor, y*heightFactor, button)
+	local widthFactor = GameSetup.actual_w / GameSetup.screen_w;
+	local heightFactor = GameSetup.actual_h / GameSetup.screen_h;
+	local newX = x*widthFactor;
+	local newY = y*heightFactor;
+    loveframes.mousereleased(newX, newY, button)
 end
  
 function love.keypressed(key, unicode)
